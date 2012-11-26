@@ -1,0 +1,42 @@
+\usepackage{listings}
+%
+% Backgroundcolor
+\definecolor{hellgrau}{gray}{0.9}
+%
+% Configuration
+%
+\lstdefinestyle{javaStyle}{%
+  basicstyle=\small,%
+  backgroundcolor=\color{hellgrau},%
+  keywordstyle=\bfseries,%
+  showstringspaces=false,%
+  language=Java,%
+  numbers=left,%
+  numberstyle=\tiny,%
+  stepnumber=1,%
+  numbersep=5pt,%
+  extendedchars=true,%
+  xleftmargin=2em,%
+  xrightmargin=2em,%
+  lineskip=-1pt,%
+  breaklines%
+}
+%
+% Java-Sourcecode environment
+% #1 = Caption
+% #2 = Label
+%
+\lstnewenvironment{javacode}[2]%
+{\lstset{style=javaStyle,caption=#1,label=#2}}
+{}
+% Include code from Java-file
+% #1 = Filename relative to section-folder
+% #2 = Caption
+% #3 = Label
+%
+\newcommand{\javafile}[3]{%
+   \lstinputlisting[%
+     caption={#2},%
+     label={#3},%
+     style=javaStyle]{src/#1}%
+}

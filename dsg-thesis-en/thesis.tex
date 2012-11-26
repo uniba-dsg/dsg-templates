@@ -1,0 +1,46 @@
+% Configuration
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titlepage
+\maketitle{Bachelor|Masterarbeit}{Wirtschaftsinformatik}{Thesis Topic}{Author}{dd.mm.yyyy}
+%
+% TOCs
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{Abbreviations}}
+\input{abbreviations/abbreviations.tex}
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Insert your chapters here
+%
+\input{sections/chapter-1.tex}
+\newpage
+%
+\input{sections/chapter-2.tex}
+%
+\newpage
+%
+% References
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{alpha}
+%
+% Insert your bibliography here
+\bibliography{bibliography/references}
+\newpage
+%
+% Eigenständigkeitserklärung APO
+\makedeclaration{Masterarbeit}{16.11.2012}{Alan Turing}
+%
+\end{document}

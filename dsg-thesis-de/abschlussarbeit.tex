@@ -1,0 +1,50 @@
+% Einbindung der Konfigurationsdatei
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titelblatt erstellen
+\maketitle{Bachelor|Masterarbeit}{Wirtschaftsinformatik}{Thema der Arbeit}{Autor}{dd.mm.yyyy}
+%
+% Erstellung der Inhaltsverzeichnisse
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{Abkürzungsverzeichnis}}
+\input{abbreviations/abbreviations.tex}
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Hier einzelne Kapitel mit \input{sections/Kapitel-File} einfügen.
+% Bei größeren Arbeiten empfiehlt es sich, zumindest nach Kapiteln oder
+% noch genauer aufzuteilen!
+%
+\input{sections/kapitel-1.tex}
+% usw.
+
+\newpage
+\input{sections/kapitel-2.tex}
+%
+\newpage
+%
+% Einstellungen für Literaturverzeichnis
+\addcontentsline{toc}{section}{\bibname}
+\bibliographystyle{geralpha}
+\selectlanguage{german}
+%
+% Hier das Literaturverzeichnis einbinden
+\bibliography{bibliography/references}
+\newpage
+%
+% Eigenständigkeitserklärung
+\makedeclaration{Masterarbeit}{16.11.2012}{Alan Turing}
+%
+\end{document}

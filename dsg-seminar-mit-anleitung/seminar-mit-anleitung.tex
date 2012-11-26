@@ -1,0 +1,44 @@
+\input{include/config.tex}
+\input{include/listings.tex}
+%
+\begin{document}
+%
+% Titelblatt erstellen
+\maketitle{Thema des Seminars}{Thema Alles LaTeX Oder Was ?}%
+{Autor}{Prof. Dr. Guido Wirtz}{Wintersemester 2013}{Bachelor|Master}
+%
+% Erstellung der Inhaltsverzeichnisse
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\input{abbreviations/abbreviations.tex}
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Hier einzelne Kapitel mit \input{Kapitel-File} einfügen
+%
+\input{sections/einleitung.tex}
+%
+\input{sections/allgemein.tex}
+%
+\input{sections/grafiken.tex}
+%
+\input{sections/java.tex}
+%
+\input{sections/acronym.tex}
+\newpage
+%
+% Einstellungen für Literaturverzeichnis
+\addcontentsline{toc}{section}{\bibname}
+\bibliographystyle{IEEEtran}
+%
+% Hier den bib-file einbinden
+\bibliography{bibliography/references}
+\end{document}

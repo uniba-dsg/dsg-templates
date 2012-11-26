@@ -1,0 +1,35 @@
+\input{include/config.tex}
+\input{include/listings.tex}
+\begin{document}
+%
+% Titlepage
+\maketitle{Seminar Topic}{Paper Topic}%
+{Author}{Supervisor}{Semester}{Bachelor|Master}
+%
+% Table of contents
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\input{abbreviations/abbreviations.tex}
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Insert your sections here
+%
+\input{sections/section-1.tex}
+\newpage
+%
+% References
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{IEEEtran}
+%
+% Insert your bibliography here
+\bibliography{bibliography/references}
+\end{document}
