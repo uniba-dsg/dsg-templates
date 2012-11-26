@@ -4,9 +4,11 @@ This repository contains LaTeX, MS Word and MS PowerPoint templates for the foll
 
 - Seminar (german and english)
 - Thesis (Bachelor or Master; german and english)
-- Presentation
+- Presentation (PowerPoint and LaTeX)
 
 The LaTeX template 'dsg-seminar-mit-anleitung' contains a brief description, how the templates have to be 
 used and customized for a concrete paper.
 
 In addition, general guidelines for scientific work are given.
+
+The template for presentations with LaTeX and its documentation can be found [here](https://github.com/lenhard/ub-beamer)

@@ -1,0 +1,79 @@
+\ProvidesPackage{ub-beamer}[2012/10/12]
+\RequirePackage[absolute,verbose,overlay]{textpos}
+
+\let\Tiny=\tiny % Kills two default fontsize beamer warnings
+
+%for adjusting the position of the image in the titles of frames
+%instead of using a custom main theme, configure the inner and outer themes (footline)
+\setbeamertemplate{footline}{
+	\grouplogo
+  	\ublogo
+ 	 \begin{beamercolorbox}[wd=\textwidth,ht=4ex,leftskip=1.4cm,rightskip=.3cm]{author in head/foot}
+    	\usebeamercolor{UBBlue}
+    	\hrule
+    	\vspace{0.1cm}
+   		\insertdate \hfill \inserttitle \newline 
+     	\insertshortauthor \ - \insertshortinstitute \hfill \insertframenumber
+  	\end{beamercolorbox}
+  	\vspace*{0.1cm}
+} 
+
+%the university of bamberg colors
+\definecolor{UBBlue}{RGB}{83,121,170}
+\definecolor{UBBlack}{RGB}{26,23,27}
+\definecolor{UBYellow}{RGB}{255,211,0}
+\definecolor{UBGreen}{RGB}{151,191,13}
+\definecolor{UBRed}{RGB}{230,68,79}
+\definecolor{UBGray}{RGB}{135,135,131}
+
+%the usage of the colors in special elements
+\setbeamercolor{title}{fg=UBBlue}
+\setbeamercolor{frametitle}{fg=UBBlue}
+\setbeamercolor{structure}{fg=UBBlue}
+
+% use square bullet points instead of arrows
+\setbeamertemplate{items}[square]
+
+%Do not count the front slide
+\setcounter{framenumber}{0}
+
+
+\def \grouplogofile {images/ub-logo}
+\def \ublogofile {images/ub-logo}
+%to position the group logo at the right-upper corner of a slide
+\newcommand{\grouplogo}{
+	%TPHorizModule and TPVertModule are the factors with which the horizontal and vertical alignment of the following textblock are calculated
+  \setlength{\TPHorizModule}{1pt}
+  \setlength{\TPVertModule}{1pt}
+  %  textblock{}{x,y}: pos(x) = x * TPHorizModule, pos(y) = y * TPVertModule
+  \begin{textblock}{1}(325,6)
+   \includegraphics[width=30pt,height=30pt]{\grouplogofile}
+  \end{textblock}
+  } 
+  
+  %
+% Includes the university logo at the lower left corner of the slide
+  \newcommand{\ublogo}{
+	%TPHorizModule and TPVertModule are the factors with which the horizontal and vertical alignment of the following textblock are calculated
+  \setlength{\TPHorizModule}{1pt}
+  \setlength{\TPVertModule}{1pt}
+  %  textblock{}{x,y}: pos(x) = x * TPHorizModule, pos(y) = y * TPVertModule
+  \begin{textblock}{1}(8,245)
+   \includegraphics[width=25pt,height=25pt]{\ublogofile}
+  \end{textblock}
+  } 
+  
+   %Colors the given text in standard blue
+  \newcommand{\markB}[1]{%
+  	{\color{UBBlue} #1}%
+  }
+  
+   %Colors the given text in standard blue and rendered bold
+  \newcommand{\markBB}[1]{%
+  	{\color{UBBlue} \textbf{#1}}%
+  }
+  
+   %Colors the given text in standard blue and rendered italic
+  \newcommand{\markBI}[1]{%
+  	{\color{UBBlue} \textit{#1}}%
+  }
