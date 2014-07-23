@@ -5,6 +5,7 @@ This repository contains LaTeX, MS Word and MS PowerPoint templates for the foll
 - Seminar (german and english)
 - Thesis (Bachelor or Master; german and english)
 - Presentation (PowerPoint and LaTeX)
+- Poster (PowerPoint; english)
 
 The LaTeX template 'dsg-seminar-mit-anleitung' contains a brief description, how the templates have to be 
 used and customized for a concrete paper.
