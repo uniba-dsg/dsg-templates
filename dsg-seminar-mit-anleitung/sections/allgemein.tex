@@ -1,17 +1,17 @@
 %
 \section{Genereller Aufbau}
 %
-Die zentrale Datei der Vorlage ist die Datei \texttt{seminar.tex}, die vom Autor für jeweilige Arbeit
-anzupassen ist. In dieser Datei können die Einstellungen für die Titelseite vorgenommen
-werden. Des Weiteren müssen in dieser Datei die einzelnen Kapitel der Arbeit, sowie die
-\textit{.bib}-Datei mit den \textit{bibtex}-Einträgen eingebunden werden.
+Die zentrale Datei der Vorlage ist die Datei \texttt{seminar.tex}, die vom Autor fÃ¼r jeweilige Arbeit
+anzupassen ist. In dieser Datei kÃ¶nnen die Einstellungen fÃ¼r die Titelseite vorgenommen
+werden. Des Weiteren mÃ¼ssen in dieser Datei die einzelnen Kapitel der Arbeit, sowie die
+\textit{.bib}-Datei mit den \textit{bibtex}-EintrÃ¤gen eingebunden werden.
 %
 \subsection{Erstellung einer Titelseite}
 %
-Die Erstellung der Titelseite erfolgt über den Befehl \texttt{\textbackslash maketitle}. Die Anzahl der Parameter,
-mit der dieser Befehl aufgerufen wird, hängt davon ab, ob eine Seminararbeit oder
+Die Erstellung der Titelseite erfolgt Ã¼ber den Befehl \texttt{\textbackslash maketitle}. Die Anzahl der Parameter,
+mit der dieser Befehl aufgerufen wird, hÃ¤ngt davon ab, ob eine Seminararbeit oder
 eine Bachelor-/Masterarbeit erstellt werden soll.
-Zur Erstellung einer Titelseite für eine Seminararbeit muss der Befehl \texttt{\textbackslash maketitle} mit
+Zur Erstellung einer Titelseite fÃ¼r eine Seminararbeit muss der Befehl \texttt{\textbackslash maketitle} mit
 sechs Parametern aufgerufen werden.
 %
 \begin{verbatim}
@@ -19,10 +19,10 @@ sechs Parametern aufgerufen werden.
 {Autor}{Betreuer}{Semester}{Bachelor|Master}
 \end{verbatim}
 %
-Die einzelnen Paramter sind selbsterklärend. Falls die Seminararbeit von mehreren Autoren
+Die einzelnen Paramter sind selbsterklÃ¤rend. Falls die Seminararbeit von mehreren Autoren
 verfasst wird, sind diese durch \texttt{,\textbackslash\textbackslash} zu trennen. Bei drei Autoren ist also z.B. die
-Zeichenkette \texttt{Hans Meier,\textbackslash\textbackslash\ Peter Müller und\textbackslash\textbackslash\ Hans Müller} als dritten Parameter
-einzusetzen. Als Semesterangabe sollte ein Kürzel wie \texttt{SoSe13} übergeben werden.
+Zeichenkette \texttt{Hans Meier,\textbackslash\textbackslash\ Peter MÃ¼ller und\textbackslash\textbackslash\ Hans MÃ¼ller} als dritten Parameter
+einzusetzen. Als Semesterangabe sollte ein KÃ¼rzel wie \texttt{SoSe13} Ã¼bergeben werden.
 
 Um die Titelseite einer Abschlussarbeit zu erstellen, ist der Befehl \texttt{\textbackslash maketitle} mit drei
 Parametern aufzurufen.
@@ -32,32 +32,32 @@ Parametern aufzurufen.
 {Autor}{Abgabedatum}
 \end{verbatim}
 %
-Auch in diesem Fall sind die Parameter selbsterklärend.
+Auch in diesem Fall sind die Parameter selbsterklÃ¤rend.
 %
 \subsection{Einbindung der einzelnen Kapitel}
 %
-Um die Übersichtlichkeit der erstellten Arbeit zu gewährleisten, ist es sinnvoll, für jedes
+Um die Ãœbersichtlichkeit der erstellten Arbeit zu gewÃ¤hrleisten, ist es sinnvoll, fÃ¼r jedes
 Kapitel eine einzelne \textit{.tex}-Datei zu erstellen. 
 Damit unter Verwendung dieser Dateien ein einzelnes Dokument erstellt wird, sind die einzelnen Kapitel in der Datei \texttt{seminar.tex}
-einzubinden. Dies erfolgt über den Befehl \texttt{\textbackslash input}. Soll z.B. ein Kapitel eingefügt werden,
+einzubinden. Dies erfolgt Ã¼ber den Befehl \texttt{\textbackslash input}. Soll z.B. ein Kapitel eingefÃ¼gt werden,
 dass in der Datei \texttt{kapitel-1.tex} enthalten ist, so geschieht dies durch die folgende
 Anweisung.
 
 \texttt{\textbackslash input\{kapitel-1\}}
 
-Diese Anweisung ist an der in der Datei \texttt{seminar.tex} markierten Stelle einzufügen. 
+Diese Anweisung ist an der in der Datei \texttt{seminar.tex} markierten Stelle einzufÃ¼gen. 
 %
 \subsection{Einbindung des Literaturverzeichnisses}
 %
-Die einzelnen Literaturquellen sind in einer \textit{.bib}--Datei aufzuführen. Die \textit{bibtex}--Datei \texttt{example.bib} enthält einige Beispiele, wie
-verschiedenen Quellen wie Buch, Artikel usw. in dieser Datei aufzuführen sind. Jeder der
-Einträge benötigt zur Referenzierung ein eindeutiges Label, das sich aus den ersten drei
+Die einzelnen Literaturquellen sind in einer \textit{.bib}--Datei aufzufÃ¼hren. Die \textit{bibtex}--Datei \texttt{example.bib} enthÃ¤lt einige Beispiele, wie
+verschiedenen Quellen wie Buch, Artikel usw. in dieser Datei aufzufÃ¼hren sind. Jeder der
+EintrÃ¤ge benÃ¶tigt zur Referenzierung ein eindeutiges Label, das sich aus den ersten drei
 Buchstaben des Nachnamen des Autors und den letzten beiden Ziffern der Jahreszahl der
-Veröffentlichung ergeben. Sind mehrere Autoren bei einer Literaturquelle aufgeführt, so
+VerÃ¶ffentlichung ergeben. Sind mehrere Autoren bei einer Literaturquelle aufgefÃ¼hrt, so
 ergibt sich der Label aus den Anfangsbuchstaben der Nachnamen der ersten drei Autoren
-und den letzten beiden Ziffern der Jahreszahl der Veröffentlichung. Falls ein Autor in einem
-Jahr mehrere Werke veröffentlich hat, so sind die weiteren Label mit kleinen Buchstaben,
-beginnend bei \textit{b}, zu ergänzen.
+und den letzten beiden Ziffern der Jahreszahl der VerÃ¶ffentlichung. Falls ein Autor in einem
+Jahr mehrere Werke verÃ¶ffentlich hat, so sind die weiteren Label mit kleinen Buchstaben,
+beginnend bei \textit{b}, zu ergÃ¤nzen.
 
 Eine \textit{.bib}-Datei ist mit Hilfe der Anweisung \texttt{\textbackslash bibliography} in der Datei \texttt{seminar.tex} einzubinden.
 Die hier verwendete Datei \texttt{references.bib} wurde also durch durch folgende Anweisung

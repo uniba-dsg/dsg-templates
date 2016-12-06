@@ -9,7 +9,7 @@
 \documentclass[a4paper, 12pt]{article}
 \fi
 \usepackage{german}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage[T1]{fontenc}
 \usepackage{ae}
@@ -25,7 +25,7 @@
 \usepackage[dvips]{graphicx}
 \fi
 %
-% ausführlichere Fehlermeldungen
+% ausfÃ¼hrlichere Fehlermeldungen
 \errorcontextlines=999
 %
 % Page-Layout
@@ -58,8 +58,8 @@
       \hfill
       \begin{minipage}{9cm}
         \centering
-        Otto-Friedrich-Universität Bamberg\\[12pt]
-        {\Large Lehrstuhl für Praktische Informatik}
+        Otto-Friedrich-UniversitÃ¤t Bamberg\\[12pt]
+        {\Large Lehrstuhl fÃ¼r Praktische Informatik}
       \end{minipage}
       \hfill
       \begin{minipage}{3cm}
@@ -87,14 +87,14 @@
 {
 \pagestyle{fancy}
 \fancyhf{}
-\fancyfoot[LO]{\footnotesize\sc Lehrstuhl für Praktische Informatik}
+\fancyfoot[LO]{\footnotesize\sc Lehrstuhl fÃ¼r Praktische Informatik}
 \fancyfoot[RO]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 }
 %
 % Einbindung eines Bildes
-% #1 = label für \ref-Verweise
+% #1 = label fÃ¼r \ref-Verweise
 % #2 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #3 = Beschriftung
 % #4 = Breite des Bildes im Dokument in cm
@@ -110,12 +110,12 @@
   \end{figure}%
 }
 %
-% Umgebung für Fliesstext um Grafik
+% Umgebung fÃ¼r Fliesstext um Grafik
 % #1 = Ausrichtung: r, l, i, ...
 % #2 = Breite des Bildes in cm
 % #3 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #4 = Beschriftung
-% #5 = label für \ref-Verweise
+% #5 = label fÃ¼r \ref-Verweise
 \newcommand{\fliesstext}[5]{%
 \begin{wrapfigure}{#1}{#2cm}%
 \includegraphics[width=#2cm]{images/#3}%
