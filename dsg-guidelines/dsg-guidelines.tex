@@ -1,0 +1,130 @@
+\input{include/vorlage}
+%
+\begin{document}
+% Vorlesung, Blatt-#, Autor, Key-Words (mit Kommata)
+\atitle
+%
+\begin{center}
+{\bf\huge Guidelines for writing seminar-, bachelor-, and mastertheses}
+
+{\it April 2019}
+\end{center}
+%
+\section{Structure of seminar-, bachelor- and mastertheses}
+%
+
+For writing theses, it is mandatory to use the DSG templates provided in the general VC course\footnote{\url{https://vc.uni-bamberg.de/moodle/course/view.php?id=2139}}. They already include the title page, lists of content, and formatting options.
+
+\subsection{Lists of content}
+
+At the beginning of a thesis, right after the title page, there are the following lists:
+
+\begin{itemize}
+	\item Contents
+	\item List of Figures
+	\item List of Tables
+	\item Listings
+	\item Abbreviations.
+\end{itemize}
+
+The list of contents, list of figures, list of tables, and list of listings are created automatically in all templates when the designated formatting options for figures and tables are used.\footnote{Check the documentation inside the Word or LaTeX documents}. 
+The list of abbreviations includes all abbreviations used in the thesis, sorted alphabetically, and no more.
+Excluded from the list of abbreviations are commonly known abbreviations, such as 'e.g.' or 'i.e.'
+Abbreviations have to be written out when they are first used and the abbreviation has to be put in brackets after the written out version.
+
+\textit{Example}: In the text: "`...for this, the \textit{Java Development Kit} (JDK) was used..."'\\
+Entry in the list of abbreviations: -- "`\textit{JDK} \hspace{10pt} Java Development Kit"'.
+
+Lists which are not needed, have to be removed before the submission of the thesis.
+After the lists, follows the main part of the thesis.
+
+\subsection{Main part}
+The main part includes the actual work.
+You should coordinate the concrete structure with your supervisor.
+The following can serve as a reference:\\
+The main part begins with the introduction which outlines the topic and motivates the thesis.
+After the introduction, a short overview of the proceeding and the following sections is given, to provide the reader with a 'big picture' of the work.
+The following sections then present the actual work.
+The thesis is ended with a summary which presents the main conclusions and evaluates the work as a whole. \footnote{For example, a comparison of advantages and disadvantages of the used methods or self-developed solutions, etc.}. 
+Furthermore, the summary should provide an outlook on possible future work on the topic of the thesis.
+
+\subsection{Citations and Bibliography}
+
+A thesis is based on \textit{thoroughly} researched literature sources which have to be referenced.
+The bibliography may therefore contain the following types of literature:
+\begin{itemize}
+	\item (Text-)books,
+	\item Articles from scientific journals,
+	\item Proceedings of Conferences and Workshops,
+	\item Technical reports
+	\item and Standards
+\end{itemize}
+
+Sources should be described as detailed as possible, in order to identify and retrieve them.
+In general, the author and title should always be given.
+Further details depend on the specific type of literature: 
+
+\begin{itemize}
+	\item Books: Author, Title, Edition, Publisher, Date\footnote{at least the year, if possible also the month}
+	\item Journal articles: Author, Title, Name of the journal, Volume, Number, Pages
+	\item Proceedings of conferences and workshops: Author, Title, Name of the conference, Place, Date, Pages
+	\item Technical reports: Author, Organization (e.g. University), Title, Date
+	\item Standards: Name of the issuing organization Name (without specific authors), Title, Version, Date
+\end{itemize}
+
+The bibliography must not include non-scientific sources\footnote{Notably, Web sites, Manuals, Articles from non-scientific magazines, etc.}. 
+If you cite such sources, you should use a footnote instead.
+Excluded from being used as a source is everything written for the same purpose (other theses) or for teaching material
+If you are in doubt about a specific source, ask your supervisor.
+
+You can cite sources with a direct or indirect citation.
+This has to be marked explicitly.
+A citation is direct, if a statement is used literally.
+A citation is indirect, if a statement is reproduced using own words.
+
+Direct citations have to be separated from other text by using quotations marks and the source has to referenced with its number from the bibliography with page numbers. 
+Example: "`This is a literal citation from a source"' ([22] p. 231). 
+If parts of text are omitted within a citation, this has to be marked with '[...]'.
+If parts of text are added to improve the understandability, they have to surrounded by square brackets as well. 
+Further additions to the text (e.g. underlining	or highlighting) also need to be marked as own additions.
+If a citation is a word-by-word translation from a foreign language, it also counts as a direct citation and it has to be marked that it is a translation.
+Indirect citations also need to be referenced with the number from the bibliography and a page number.
+If the citation is based on two pages this has to be marked with f. (following).
+If it is based on three to five pages, this has to marked with ff. and for citations from more than five pages this has to be marked with the concrete number of pages (E.g. p. 15--23).
+
+\subsection{Appendix}
+
+After the bibliography, an appendix can follow, if needed.
+An appendix can include further explanations, figures, tables, etc. which provide more detailed information, but are not required to understand the thesis.
+This is especially relevant for bachelor- and mastertheses, for which important parts of the source code\footnote{It is undesired to present the complete source code} or complete UML diagrams can be included in the appendix, while the main part only includes extractions from the source code or diagrams.
+
+The last page of a thesis should include the declaration of originality (Eigenständigkeitserklärung), as required by the examination office.
+
+\newpage
+\section{Submission}
+
+The submission of a thesis has to be made according to the rules defined in the examination regulations (Prüfungsordnung).
+For theses with a practical part, the source code, UML diagrams, required libraries and the compiled software have to be added to the thesis on a disk.
+In addition to the submission at the examination office, the thesis has to be given to the supervisor as a PDF file (e.g. using e-mail or a disk).
+
+The submission of seminar theses has to be coordinated with the respective supervisor.
+In general, they are submitted via Email as a PDF file on the day they are due.
+
+\section{Grading of theses}
+
+The grading of a thesis is based on its content and formal requirements.
+Therefore, it is necessary to comply with the rules described here.
+The thesis should not include great linguistic deficiencies (Spelling and grammar mistakes).
+Of special importance is the correct reference of used literature sources.
+If literature sources are not referenced properly, the thesis might be graded with insufficient.
+
+
+\section{Notes on Microsoft Word and \LaTeX}
+
+In the general VC-course, the chair provides templates for LaTeX as well as Microsoft Word.
+For both template types, it is forbidden to change the predefined spacing and formatting.
+\textbf{The DSG chair generally recommends to use the TeX/LaTeX template}, because there the creation and management of the bibliography can be done automatically with BibTeX.
+
+More helpful information on using LaTeX can be found in the template "`dsg-seminar-with-instructions"'.
+%
+\end{document}
