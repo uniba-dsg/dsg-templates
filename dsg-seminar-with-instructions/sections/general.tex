@@ -1,0 +1,66 @@
+%
+\section{Genereller Aufbau}
+%
+Die zentrale Datei der Vorlage ist die Datei \texttt{seminar.tex}, die vom Autor für jeweilige Arbeit
+anzupassen ist. In dieser Datei können die Einstellungen für die Titelseite vorgenommen
+werden. Des Weiteren müssen in dieser Datei die einzelnen Kapitel der Arbeit, sowie die
+\textit{.bib}-Datei mit den \textit{bibtex}-Einträgen eingebunden werden.
+%
+\subsection{Erstellung einer Titelseite}
+%
+Die Erstellung der Titelseite erfolgt über den Befehl \texttt{\textbackslash maketitle}. Die Anzahl der Parameter,
+mit der dieser Befehl aufgerufen wird, hängt davon ab, ob eine Seminararbeit oder
+eine Bachelor-/Masterarbeit erstellt werden soll.
+Zur Erstellung einer Titelseite für eine Seminararbeit muss der Befehl \texttt{\textbackslash maketitle} mit
+sechs Parametern aufgerufen werden.
+%
+\begin{verbatim}
+\maketitle{Thema des Seminars}{Thema der Ausarbeitung}%
+{Autor}{Betreuer}{Semester}{Bachelor|Master}
+\end{verbatim}
+%
+Die einzelnen Paramter sind selbsterklärend. Falls die Seminararbeit von mehreren Autoren
+verfasst wird, sind diese durch \texttt{,\textbackslash\textbackslash} zu trennen. Bei drei Autoren ist also z.B. die
+Zeichenkette \texttt{Hans Meier,\textbackslash\textbackslash\ Peter Müller und\textbackslash\textbackslash\ Hans Müller} als dritten Parameter
+einzusetzen. Als Semesterangabe sollte ein Kürzel wie \texttt{SoSe13} übergeben werden.
+
+Um die Titelseite einer Abschlussarbeit zu erstellen, ist der Befehl \texttt{\textbackslash maketitle} mit drei
+Parametern aufzurufen.
+%
+\begin{verbatim}
+\maketitle{Bachelor-/Masterarbeit}{Studiengang}{Thema der Arbeit}%
+{Autor}{Abgabedatum}
+\end{verbatim}
+%
+Auch in diesem Fall sind die Parameter selbsterklärend.
+%
+\subsection{Einbindung der einzelnen Kapitel}
+%
+Um die Übersichtlichkeit der erstellten Arbeit zu gewährleisten, ist es sinnvoll, für jedes
+Kapitel eine einzelne \textit{.tex}-Datei zu erstellen. 
+Damit unter Verwendung dieser Dateien ein einzelnes Dokument erstellt wird, sind die einzelnen Kapitel in der Datei \texttt{seminar.tex}
+einzubinden. Dies erfolgt über den Befehl \texttt{\textbackslash input}. Soll z.B. ein Kapitel eingefügt werden,
+dass in der Datei \texttt{kapitel-1.tex} enthalten ist, so geschieht dies durch die folgende
+Anweisung.
+
+\texttt{\textbackslash input\{kapitel-1\}}
+
+Diese Anweisung ist an der in der Datei \texttt{seminar.tex} markierten Stelle einzufügen. 
+%
+\subsection{Einbindung des Literaturverzeichnisses}
+%
+Die einzelnen Literaturquellen sind in einer \textit{.bib}--Datei aufzuführen. Die \textit{bibtex}--Datei \texttt{example.bib} enthält einige Beispiele, wie
+verschiedenen Quellen wie Buch, Artikel usw. in dieser Datei aufzuführen sind. Jeder der
+Einträge benötigt zur Referenzierung ein eindeutiges Label, das sich aus den ersten drei
+Buchstaben des Nachnamen des Autors und den letzten beiden Ziffern der Jahreszahl der
+Veröffentlichung ergeben. Sind mehrere Autoren bei einer Literaturquelle aufgeführt, so
+ergibt sich der Label aus den Anfangsbuchstaben der Nachnamen der ersten drei Autoren
+und den letzten beiden Ziffern der Jahreszahl der Veröffentlichung. Falls ein Autor in einem
+Jahr mehrere Werke veröffentlich hat, so sind die weiteren Label mit kleinen Buchstaben,
+beginnend bei \textit{b}, zu ergänzen.
+
+Eine \textit{.bib}-Datei ist mit Hilfe der Anweisung \texttt{\textbackslash bibliography} in der Datei \texttt{seminar.tex} einzubinden.
+Die hier verwendete Datei \texttt{references.bib} wurde also durch durch folgende Anweisung
+in dieses Dokument eingebunden.
+
+\texttt{\textbackslash bibliography\{references\}}

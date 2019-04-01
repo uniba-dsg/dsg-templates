@@ -1,0 +1,59 @@
+%
+\section{Einbindung von Grafiken}
+%
+Im Allgemeinen werden Grafiken zwischen Absätzen eingefügt. Eine andere
+Möglichkeit ist es, die Grafiken von Text umfließen zu lassen. Generell gilt
+aber, dass die Grafiken als \emph{pdf}- oder \emph{eps}-Dateien vorliegen
+sollten. Dies hängt davon ab, ob \emph{latex} oder \emph{pdflatex} zur Erzeugung
+des Dokumentes verwendet wird. Wird \emph{latex} zur Erzeugung genutzt, so
+können nur \emph{eps}-Dateien eingebunden werden. Wird das Dokument mit
+\emph{pdflatex} erstellt, so sind \emph{pdf}-Dateien zu verwenden.
+
+Grafiken müssen generell im \emph{images}-Verzeichnis vorhanden sein, um sie
+erfolgreich einbinden zu können. Selbst erstellte Grafiken müssen also in das
+\emph{images}-Verzeichnis kopiert werden.
+
+\subsection{Grafiken zwischen Absätzen}
+%
+Eine Einbindung von Grafiken zwischen Absätzen erfolgt mit dem Befehl
+\texttt{\textbackslash bild}.
+\begin{verbatim}
+\bild{bild1}{vs-logo}{DSG-Logo}{5}
+\end{verbatim}
+Der erste Parameter \texttt{bild1} dient als Label für Referenzen auf die
+Grafik. Der zweite Parameter ist der Name der Grafikdatei ohne Endung. Als
+dritten Parameter ist dem Befehl \texttt{\textbackslash bild} die Beschriftung
+der Abbildung zu übergeben. Der letzte Parameter gibt
+die Breite der Grafik in cm an. Die Größenangabe darf aber nur als Zahl erfolgen.
+Ist eine Grafik breiter als der übergebene Parameter, so wird sie verkleinert, kleinere Grafiken werden
+entsprechend vergrößert. Der obige Befehl führt zu der folgenden Abbildung
+\ref{bild1}.
+
+\bild{bild1}{vs-logo}{DSG-Logo}{5}
+
+\subsection{Von Text umflossene Grafiken}
+%
+Sollen Grafiken von Text umflossen werden, so ist der Befehl
+\texttt{\textbackslash fliesstext} zu benutzen. Dieser Befehl basiert auf dem Paket
+\emph{wrapfig}, dass u.U. nachinstalliert werden muss. Dieses
+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}
+Paket ist, wie alle anderen Umgebungen mit dieser Funktionalität, etwas
+beschränkt und zum Teil fehlerhaft, deshalb ist die Nutzung nur unter Vorbehalt
+empfohlen. Eine Grafik kann wie folgt eingebunden werden.\\\\
+\verb+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}+\\\\
+Nach diesem Befehl folgt der Text, der das eingebundene Bild umfliessen
+soll. Für den ersten Parameter kommen als einzig relevante Möglichkeiten die
+kleinen Buchstaben \emph{l} und \emph{r} in Frage. Diese sorgen für eine
+Anordnung der Grafik auf der linken, bzw. rechten Seite. Mit Hilfe des zweiten
+Parameters wird die gewünschte Breite der Grafik in cm angegeben, die
+entsprechend skaliert wird. Der dritte Parameter ist der Name der Grafikdatei
+ohne Endung. Der vierte Parameter bestimmt die Bezeichnung der Grafik. Durch den
+fünften Parameter kann ein Label zur Referenzierung angegeben werden.
+
+Eine Eigenheit dieses Pakets ist es, dass Grafiken immer am Anfang eines
+Absatzes eingefügt werden. Soll eine Grafik von einem Absatz komplett
+umschlossen werden, wie dies bei der Abbildung \ref{bild2} der Fall ist, so ist
+der \texttt{\textbackslash fliesstext}-Befehl nicht vor dem Absatz aufzuführen, sondern in
+den Text zu integrieren. Der obige \texttt{\textbackslash fliesstext}-Befehl ist demnach
+hinter dem Wort "`Dieses"' in den Quelltext eingefügt worden.
+%

@@ -1,0 +1,44 @@
+\input{include/config.tex}
+\input{include/listings.tex}
+%
+\begin{document}
+%
+% Create title page
+\maketitle{Seminar Topic}{LaTeX only}%
+{Author}{Prof. Dr. Guido Wirtz}{Winterterm 2018/2019}{Bachelor|Master}
+%
+% Create lists of content
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\input{abbreviations/abbreviations.tex}
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Include sections with \input{section-file}
+%
+\input{sections/introduction.tex}
+%
+\input{sections/general.tex}
+%
+\input{sections/graphics.tex}
+%
+\input{sections/java.tex}
+%
+\input{sections/acronym.tex}
+\newpage
+%
+% Settings for bibliography
+\addcontentsline{toc}{section}{\bibname}
+\bibliographystyle{IEEEtran}
+%
+% Include bib-file
+\bibliography{bibliography/references}
+\end{document}
