@@ -1,66 +1,53 @@
 %
-\section{Genereller Aufbau}
+\section{General structure}
 %
-Die zentrale Datei der Vorlage ist die Datei \texttt{seminar.tex}, die vom Autor für jeweilige Arbeit
-anzupassen ist. In dieser Datei können die Einstellungen für die Titelseite vorgenommen
-werden. Des Weiteren müssen in dieser Datei die einzelnen Kapitel der Arbeit, sowie die
-\textit{.bib}-Datei mit den \textit{bibtex}-Einträgen eingebunden werden.
+The central file of the template is \texttt{seminar.tex} which needs to be adjusted by the specific author for a specific thesis.
+In the file, settings for the title page can be changed.
+Furthermore, the files for the individual sections need to be included, as well as the \textit{.bib}-file containing \textit{bibtex}-entries.
 %
-\subsection{Erstellung einer Titelseite}
+\subsection{Creation of a title page}
 %
-Die Erstellung der Titelseite erfolgt über den Befehl \texttt{\textbackslash maketitle}. Die Anzahl der Parameter,
-mit der dieser Befehl aufgerufen wird, hängt davon ab, ob eine Seminararbeit oder
-eine Bachelor-/Masterarbeit erstellt werden soll.
-Zur Erstellung einer Titelseite für eine Seminararbeit muss der Befehl \texttt{\textbackslash maketitle} mit
-sechs Parametern aufgerufen werden.
+A title page can be created using the command \texttt{\textbackslash maketitle}. 
+Depending on whether it is a seminar paper or a Bachelor/Masterthesis, the command has a different number of parameters. 
+To create a title page for a seminar paper, six parameters need to be passed to \texttt{\textbackslash maketitle}.
 %
 \begin{verbatim}
-\maketitle{Thema des Seminars}{Thema der Ausarbeitung}%
-{Autor}{Betreuer}{Semester}{Bachelor|Master}
+\maketitle{Seminar topic}{Paper topic}%
+{Author}{Supervisor}{Semester}{Bachelor|Master}
 \end{verbatim}
 %
-Die einzelnen Paramter sind selbsterklärend. Falls die Seminararbeit von mehreren Autoren
-verfasst wird, sind diese durch \texttt{,\textbackslash\textbackslash} zu trennen. Bei drei Autoren ist also z.B. die
-Zeichenkette \texttt{Hans Meier,\textbackslash\textbackslash\ Peter Müller und\textbackslash\textbackslash\ Hans Müller} als dritten Parameter
-einzusetzen. Als Semesterangabe sollte ein Kürzel wie \texttt{SoSe13} übergeben werden.
+The individual parameters are self-explanatory.
+If the seminar paper is written by more than one author, the names should be separated by \texttt{,\textbackslash\textbackslash}.
+In the case of three authors, the third parameter would therefore be  \texttt{Hans Meier,\textbackslash\textbackslash\ Peter Müller and\textbackslash\textbackslash\ Hans Müller} as an example.
+For the semester, an abbreviation should be used, such as \texttt{SoSe19}.
 
-Um die Titelseite einer Abschlussarbeit zu erstellen, ist der Befehl \texttt{\textbackslash maketitle} mit drei
-Parametern aufzurufen.
+To create a title page for a Bachelor/Masterthesis, the command \texttt{\textbackslash maketitle} has to be called with three parameters.
 %
 \begin{verbatim}
-\maketitle{Bachelor-/Masterarbeit}{Studiengang}{Thema der Arbeit}%
-{Autor}{Abgabedatum}
+\maketitle{Bachelor-/Masterthesis}{Course of studying}{Thesis topic}%
+{Author}{Submission date}
 \end{verbatim}
 %
-Auch in diesem Fall sind die Parameter selbsterklärend.
+Also in this case, the parameters are self-explanatory.
 %
-\subsection{Einbindung der einzelnen Kapitel}
+\subsection{Including sections}
 %
-Um die Übersichtlichkeit der erstellten Arbeit zu gewährleisten, ist es sinnvoll, für jedes
-Kapitel eine einzelne \textit{.tex}-Datei zu erstellen. 
-Damit unter Verwendung dieser Dateien ein einzelnes Dokument erstellt wird, sind die einzelnen Kapitel in der Datei \texttt{seminar.tex}
-einzubinden. Dies erfolgt über den Befehl \texttt{\textbackslash input}. Soll z.B. ein Kapitel eingefügt werden,
-dass in der Datei \texttt{kapitel-1.tex} enthalten ist, so geschieht dies durch die folgende
-Anweisung.
+To keep the work well-arranged, it is reasonable to create a \textit{.tex}-file for each section.
+To assemble the files to one single document, the sections need to be included using the command  \texttt{\textbackslash input} inside the file \texttt{seminar.tex}.
+If, for example, a section should be included which is inside the file \texttt{section-1.tex}, then the following command would be used:
 
-\texttt{\textbackslash input\{kapitel-1\}}
+\texttt{\textbackslash input\{section-1\}}
 
-Diese Anweisung ist an der in der Datei \texttt{seminar.tex} markierten Stelle einzufügen. 
 %
-\subsection{Einbindung des Literaturverzeichnisses}
+\subsection{Including the bibliography}
 %
-Die einzelnen Literaturquellen sind in einer \textit{.bib}--Datei aufzuführen. Die \textit{bibtex}--Datei \texttt{example.bib} enthält einige Beispiele, wie
-verschiedenen Quellen wie Buch, Artikel usw. in dieser Datei aufzuführen sind. Jeder der
-Einträge benötigt zur Referenzierung ein eindeutiges Label, das sich aus den ersten drei
-Buchstaben des Nachnamen des Autors und den letzten beiden Ziffern der Jahreszahl der
-Veröffentlichung ergeben. Sind mehrere Autoren bei einer Literaturquelle aufgeführt, so
-ergibt sich der Label aus den Anfangsbuchstaben der Nachnamen der ersten drei Autoren
-und den letzten beiden Ziffern der Jahreszahl der Veröffentlichung. Falls ein Autor in einem
-Jahr mehrere Werke veröffentlich hat, so sind die weiteren Label mit kleinen Buchstaben,
-beginnend bei \textit{b}, zu ergänzen.
+The literature sources should be listed in a \textit{.bib}--file.
+The \textit{bibtex}--file \texttt{example.bib} contains some examples of different sources, like books, articles, etc.
+Each entry needs a unique label, which is formed from the first three letters of the lastname of the author and the last two digits of the year when it was published.
+If there is more than one author for a source, the label is formed from the beginning letters of the lastnames of the first three authors and the last two digits of the year when it was published.
+If an author has published more than one work within a year, the following labels should be appended with small letters, starting with \textit{b}.
 
-Eine \textit{.bib}-Datei ist mit Hilfe der Anweisung \texttt{\textbackslash bibliography} in der Datei \texttt{seminar.tex} einzubinden.
-Die hier verwendete Datei \texttt{references.bib} wurde also durch durch folgende Anweisung
-in dieses Dokument eingebunden.
+A \textit{.bib}-file should be included using \texttt{\textbackslash bibliography} within the file \texttt{seminar.tex}.
+The exemplary file \texttt{references.bib} was therefore included using:
 
 \texttt{\textbackslash bibliography\{references\}}

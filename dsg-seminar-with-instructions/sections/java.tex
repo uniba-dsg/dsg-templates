@@ -1,56 +1,53 @@
 %
-\section{Einbindung von Java-Quellcode}
+\section{Including Java source code}
 %
-Zur Einbindung von Java-Quellcode ist das Paket \emph{listings} notwendig, dass
-u.U. nachinstalliert werden muss. Dieses Paket ermöglicht es, dass Quellcode von
-verschiedenen Sprachen auf eine übersichtliche Weise in das Dokument eingebunden
-werden kann. Die Einbindung von Java-Quellcode kann auf zwei Arten erfolgen: zum
-einen kann der Java-Quellcode im Quelltext des Dokumentes aufgelistet werden,
-zum anderen kann der Quellcode aus einer Datei eingelesen werden.
+To include Java source code, the package \emph{listings} is required, which might have to be installed.
+This package enables the inclusion of source code from various programming languages into the document.
+There are two possibilities to include source code in a document. 
+One possibility is to put the source code directly in the document and the other is to read it from a file.
 
-Die Einbindung von Quellcode, der im Quelltext aufgeführt ist, muss über die
-Nutzung einer Umgebung geschehen. Dies soll an einem kleinen Beispiel gezeigt
-werden.
+To include source code directly, a special environment is required which is shown in the following example:
+
 \begin{verbatim}
-\begin{javacode}{Das ist das erste Listing}{listing1}
+\begin{javacode}{This is the first listing}{listing1}
 public class Test{
 
   public Test(){
-    // mach was
+    // do something
   }
 
 }
 \end{javacode}
 \end{verbatim}
 %
-Zunächst wird eine Umgebung mit der Bezeichnung \texttt{javacode}
-erstellt. Als Parameter wird die Überschrift, sowie das Label übergeben. 
-In der Umgebung wird der Java-Quellcode in den Quelltext des Dokumentes eingefügt und anschließend
-die Umgebung wieder beendet. Der obige Code erzeugt das folgende Listing
-\ref{listing1}.
+First, an environment called \texttt{javacode} is created.
+Required parameters are a caption and a label.
+Then follows the actual source code and the environment is closed again.
+The above example leads to listing \ref{listing1}.
 
-\begin{javacode}{Das ist das erste Listing}{listing1}
+\begin{javacode}{This is the first listing}{listing1}
 public class Test {
 
   public Test(){
-    // mach was
+    // do something
   }
 
 }
 \end{javacode}
 
-Alternativ kann Quellcode auch aus einer Datei eingebunden werden. Dies ist
-vorteilhaft, weil die Übersichtlichkeit des Quelltextes verbessert wird. Die
-Einbindung einer Quellcode-Datei erfolgt über den Befehl
-\texttt{\textbackslash javacode}. Damit die Datei erfolgreich eingebunden werden kann, muss
-sie im Verzeichnis \texttt{src} liegen. Der Befehl kann wie folgt genutzt werden.
+As an alternative, the source code can also be read from a file.
+This is beneficial, because it increases the readability.
+To include source code from a file, the command \texttt{\textbackslash javafile} is used. 
+For a successful inclusion, the source code file has to be located in the \texttt{src}-directory. 
+
+Example usage:
 \begin{verbatim}
-\javafile{src.java}{Das ist das zweite Listing}{listing2}
+\javafile{src.java}{This is the second listing}{listing2}
 \end{verbatim}
 
-Als ersten Parameter muss der Name der Datei (mit Endung) im
-\emph{src}-Verzeichnis übergeben werden. Der zweite Parameter bestimmt die
-Überschrift des Listings. Der dritte Parameter dient zur Referenzierung. Es wird
-der gleiche Quelltext erstellt, wie in Listing \ref{listing2} zu sehen ist.
+The first parameter has to be the name of the file (with file ending) inside the \emph{src}--directory.
+The second parameter defines the caption and the third parameter is the label for referencing the listing.
 
-\javafile{src.java}{Das ist das zweite Listing}{listing2}
+The above example leads to listing \ref{listing2} as a result.
+
+\javafile{src.java}{This is the second listing}{listing2}

@@ -1,9 +1,9 @@
 \usepackage{listings}
 %
-% Hintergrundfarbe für eingebundenen Code definieren
+% Background color for embedded code
 \definecolor{hellgrau}{gray}{0.9}
 %
-% Einstellungen für Java-Code
+% Settings for Java-Code
 %
 \lstdefinestyle{javaStyle}{%
   basicstyle=\small,%
@@ -22,16 +22,16 @@
   breaklines%
 }
 %
-% neues environment für Java-Sourcecode
-% #1 = Überschrift
+% new environment for Java-Sourcecode
+% #1 = Heading
 % #2 = Label
 %
 \lstnewenvironment{javacode}[2]%
 {\lstset{style=javaStyle,caption=#1,label=#2}}
 {}
-% Befehl zum Einbinden von Java-Sourcecode aus Datei
-% #1 = Dateiname relativ zu src-Verzeichnis
-% #2 = Überschrift
+% Command to include Java code from file
+% #1 = Filename relative to the src folder
+% #2 = Heading
 % #3 = Label
 %
 \newcommand{\javafile}[3]{%

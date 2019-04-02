@@ -1,8 +1,8 @@
 %
-\section{Nutzung des Abkürzungsverzeichnisses}
+\section{Using the list of abbreviations}
 %
-Zur Einbindung des Abkürzungsverzeichnisses wird das \texttt{acronym}--Package\footnote{\url{http://www.ctan.org/tex-archive/macros/latex/contrib/acronym}} verwendet.
-Der Eintrag aller verwendeten Abkürzungen erfolgt in der Datei \texttt{abbreviations.tex}, die bspw. den folgenden Inhalt hat:
+To include the list of abbreviations, the package \texttt{acronym}\footnote{\url{http://www.ctan.org/tex-archive/macros/latex/contrib/acronym}} is used.
+Used abbreviations are added to the \texttt{abbreviations.tex}--file, which can for example have the following content:
 %
 \begin{verbatim}
 	\begin{acronym}[LSPI]
@@ -11,13 +11,14 @@ Der Eintrag aller verwendeten Abkürzungen erfolgt in der Datei \texttt{abbrevia
 	\end{acronym}
 \end{verbatim}
 %
-Die geklammerte Abkürzung \texttt{[LSPI]} sollte dabei durch die längste vorhandene Abkürzung ersetzt werden.
-Eine Abkürzung wird mit dem Befehl \texttt{\textbackslash acro} innerhalb der \texttt{acronym}--Umgebung definiert.
-Standardmäßig werden nur die im Text tatsächlich verwendeten Abkürzungen auch im Verzeichnis ausgegeben.
-Um eine Abkürzung innerhalb eines Textes einzufügen genügt der folgende Ausdruck:
+The abbreviation in square brackets \texttt{[LSPI]} should be the longest of all used abbreviations. 
+An abbreviation can be created with the command \texttt{\textbackslash acro} inside the \texttt{acronym}--environment.
+As a default, only the abbreviations which are actually used in the text are included in the list of abbreviations.
+To use an abbreviation inside the text, the following expression is sufficient:
 
 \texttt{\textbackslash ac\{}\textit{<acronym>}\texttt{\}}
 
-Bei der ersten Verwendung innerhalb des Textes bewirkt die Anweisung, dass der vollständige Name gefolgt von der Abkürzung in Klammern ausgegeben wird.
-Bei jeder weiteren Verwendung wird lediglich die Kurzform ausgegeben. Die Anweisung \texttt{\textbackslash ac\{DSG\}} erzeugt also zunächst die Langform "`\ac{DSG}"'.
-Anschließend nur noch die Abkürzung "`\ac{DSG}"'.
+When an abbreviation is used for the first time, this expression leads to the abbreviation being written out followed by the abbreviation in brackets.
+Afterwards, only the abbreviation is printed.
+The command \texttt{\textbackslash ac\{DSG\}} therefore creates the written out version when it is used for the first time: "`\ac{DSG}"'.
+And for every following usage, only the abbreviation is printed: "`\ac{DSG}"'.

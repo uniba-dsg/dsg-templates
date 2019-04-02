@@ -1,59 +1,52 @@
 %
-\section{Einbindung von Grafiken}
+\section{Including graphics}
 %
-Im Allgemeinen werden Grafiken zwischen Absätzen eingefügt. Eine andere
-Möglichkeit ist es, die Grafiken von Text umfließen zu lassen. Generell gilt
-aber, dass die Grafiken als \emph{pdf}- oder \emph{eps}-Dateien vorliegen
-sollten. Dies hängt davon ab, ob \emph{latex} oder \emph{pdflatex} zur Erzeugung
-des Dokumentes verwendet wird. Wird \emph{latex} zur Erzeugung genutzt, so
-können nur \emph{eps}-Dateien eingebunden werden. Wird das Dokument mit
-\emph{pdflatex} erstellt, so sind \emph{pdf}-Dateien zu verwenden.
+Generally, graphics are included between paragraphs.
+Another option is to surround graphics with text.
+Graphics should be provided as or \emph{pdf} or \emph{eps}-files.
+This depends on whether \emph{latex} or \emph{pdflatex} is used to create the document.
+If \emph{latex} is used, only \emph{eps}-files can be included.
+If the document is created with \emph{pdflatex}, \emph{pdf}-files should be used.
 
-Grafiken müssen generell im \emph{images}-Verzeichnis vorhanden sein, um sie
-erfolgreich einbinden zu können. Selbst erstellte Grafiken müssen also in das
-\emph{images}-Verzeichnis kopiert werden.
+Graphics should be inside the \emph{images}-directory, to easily include them. 
+Newly created graphics should therefore be copied to the \emph{images}-directory.
 
-\subsection{Grafiken zwischen Absätzen}
+\subsection{Graphics between paragraphs}
 %
-Eine Einbindung von Grafiken zwischen Absätzen erfolgt mit dem Befehl
+Graphics can be included between paragraphs using 
 \texttt{\textbackslash bild}.
 \begin{verbatim}
-\bild{bild1}{vs-logo}{DSG-Logo}{5}
+\bild{picture1}{vs-logo}{DSG-Logo}{5}
 \end{verbatim}
-Der erste Parameter \texttt{bild1} dient als Label für Referenzen auf die
-Grafik. Der zweite Parameter ist der Name der Grafikdatei ohne Endung. Als
-dritten Parameter ist dem Befehl \texttt{\textbackslash bild} die Beschriftung
-der Abbildung zu übergeben. Der letzte Parameter gibt
-die Breite der Grafik in cm an. Die Größenangabe darf aber nur als Zahl erfolgen.
-Ist eine Grafik breiter als der übergebene Parameter, so wird sie verkleinert, kleinere Grafiken werden
-entsprechend vergrößert. Der obige Befehl führt zu der folgenden Abbildung
-\ref{bild1}.
+The first parameter \texttt{picture1} serves as a label to reference the graphic. 
+The second parameter is the name of the graphics file without its file ending.
+As a third parameter, the caption has to be provided and the last parameter defines the width of the graphic in centimeters. 
+The width has to be provided as a numeric value. 
+If a graphic is wider than the provided width, it is shrinked.
+Smaller graphics are scaled up.
+The above command leads to figure \ref{picture1}.
 
-\bild{bild1}{vs-logo}{DSG-Logo}{5}
+\bild{picture1}{vs-logo}{DSG-Logo}{5}
 
-\subsection{Von Text umflossene Grafiken}
+\subsection{Graphics surrounded by text}
 %
-Sollen Grafiken von Text umflossen werden, so ist der Befehl
-\texttt{\textbackslash fliesstext} zu benutzen. Dieser Befehl basiert auf dem Paket
-\emph{wrapfig}, dass u.U. nachinstalliert werden muss. Dieses
-\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}
-Paket ist, wie alle anderen Umgebungen mit dieser Funktionalität, etwas
-beschränkt und zum Teil fehlerhaft, deshalb ist die Nutzung nur unter Vorbehalt
-empfohlen. Eine Grafik kann wie folgt eingebunden werden.\\\\
-\verb+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}+\\\\
-Nach diesem Befehl folgt der Text, der das eingebundene Bild umfliessen
-soll. Für den ersten Parameter kommen als einzig relevante Möglichkeiten die
-kleinen Buchstaben \emph{l} und \emph{r} in Frage. Diese sorgen für eine
-Anordnung der Grafik auf der linken, bzw. rechten Seite. Mit Hilfe des zweiten
-Parameters wird die gewünschte Breite der Grafik in cm angegeben, die
-entsprechend skaliert wird. Der dritte Parameter ist der Name der Grafikdatei
-ohne Endung. Der vierte Parameter bestimmt die Bezeichnung der Grafik. Durch den
-fünften Parameter kann ein Label zur Referenzierung angegeben werden.
+If a graphic should be surrounded by text, the command \texttt{\textbackslash fliesstext} has to be used.
+This command is based on the package \emph{wrapfig} which might have to be installed.
+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{picture2}
+This package is, similar to all other environments with this functionality, limited and partially erroneous.
+Therefore it should be used only with caution.
+A graphic can be included with:\\\\
+\verb+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{picture2}+\\\\
+After this command, the text follows which should surround the figure.
+For the first parameter, only the small letters \emph{l} and \emph{r} are possible.
+They lead to the graphic being arranged on the left or right side.
+The second parameter can be used to specify the desired width in centimeters.
+The graphic is scaled accordingly.
+The third parameter is the name of the graphics file without its file ending.
+The fourth parameter defines the caption for the figure and with the fifth parameter, a label can be defined to reference the figure.
 
-Eine Eigenheit dieses Pakets ist es, dass Grafiken immer am Anfang eines
-Absatzes eingefügt werden. Soll eine Grafik von einem Absatz komplett
-umschlossen werden, wie dies bei der Abbildung \ref{bild2} der Fall ist, so ist
-der \texttt{\textbackslash fliesstext}-Befehl nicht vor dem Absatz aufzuführen, sondern in
-den Text zu integrieren. Der obige \texttt{\textbackslash fliesstext}-Befehl ist demnach
-hinter dem Wort "`Dieses"' in den Quelltext eingefügt worden.
+A peculiarity of this package is that graphics are always placed at the beginning of a paragraph.
+If a graphic should be enclosed completely by a paragraph, as it is the case with figure \ref{picture2}, the command 
+\texttt{\textbackslash fliesstext} should not be placed before the paragraph but within it.
+The above command is therefore placed after the word "`installed"'.
 %
