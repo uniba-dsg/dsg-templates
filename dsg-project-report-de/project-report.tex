@@ -1,0 +1,38 @@
+% Configuration
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titlepage
+\maketitle{Projektbericht}{Titel}{Autoren}{XX.YY.ZZZZ}{Michael Mitarbeiter, M.Sc.}{Prof. Dr. Guido Wirtz}
+
+% TOCs
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{Abkürzungsverzeichnis}}
+\input{abbreviations/abbreviations.tex}
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+\input{sections/documentation.tex}
+\newpage
+\input{sections/report.tex}
+%
+\newpage
+%
+% References
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{alpha}
+%
+% Insert your bibliography here
+\bibliography{bibliography/references}
+\end{document}

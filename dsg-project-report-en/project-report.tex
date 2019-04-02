@@ -1,0 +1,38 @@
+% Configuration
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titlepage
+\maketitle{Project Report}{TITLE}{STUDENTS}{XX.YY.ZZZZ}{Andrew Assistant, M.Sc.}{Prof. Dr. Guido Wirtz}
+
+% TOCs
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\lstlistoflistings
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{Abbreviations}}
+\input{abbreviations/abbreviations.tex}
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+\input{sections/documentation.tex}
+\newpage
+\input{sections/report.tex}
+%
+\newpage
+%
+% References
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{alpha}
+%
+% Insert your bibliography here
+\bibliography{bibliography/references}
+\end{document}
