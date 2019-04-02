@@ -7,8 +7,7 @@ This repository contains LaTeX, MS Word and MS PowerPoint templates for the foll
 - Presentation (PowerPoint and LaTeX)
 - Poster (PowerPoint; english)
 
-The LaTeX template 'dsg-seminar-mit-anleitung' contains a brief description, how the templates have to be 
-used and customized for a concrete paper.
+The LaTeX template 'dsg-seminar-with-instructions', respectively 'dsg-seminar-mit-anleitung' contains a brief description, how the templates have to be used and customized for a concrete paper.
 
 In addition, general guidelines for scientific work are given.
 
