@@ -109,7 +109,7 @@ Abgabedatum:\\
 	\fancyhead[LO]{\footnotesize\sc\nouppercase{Eigenständigkeitserklärung}}
 	%
 			\vspace*{18cm}
-			Ich erkläre hiermit gemäß §17 Abs. 2 APO, dass ich die vorstehende #1 selbstständig verfasst 
+			Ich erkläre hiermit gemäß §9 Abs. 12 APO, dass ich die vorstehende #1 selbstständig verfasst 
 			und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe.\\
 			\vspace*{1cm}
 			
@@ -122,19 +122,21 @@ Abgabedatum:\\
 %
 % Einstellungen für Java-Code
 \lstdefinestyle{javaStyle}{%
-  basicstyle=\small,%
-  backgroundcolor=\color{hellgrau},%
-  keywordstyle=\bfseries,%
-  showstringspaces=false,%
-  language=Java,%
-  numbers=left,%
-  numberstyle=\tiny,%
-  stepnumber=1,%
-  numbersep=5pt,%
-  extendedchars=true,%
-  xleftmargin=2em,%
-  lineskip=-1pt,%
-  breaklines%
+	basicstyle=\small,%
+	backgroundcolor=\color{hellgrau},%
+	keywordstyle=\bfseries,%
+	showstringspaces=false,%
+	numbers=left,%
+	numberstyle=\footnotesize,%
+	stepnumber=1,%
+	numbersep=3pt,%
+	extendedchars=true,%
+	xleftmargin=2em,%
+	lineskip=-1pt,%
+	tabsize=4,%
+	language=Java,
+	breaklines,%
+	identifierstyle=\ttfamily,
 }
 %
 % neues environment für Java-Sourcecode
@@ -159,7 +161,7 @@ Abgabedatum:\\
 % #2 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #3 = Beschriftung
 % #4 = Breite des Bildes im Dokument in cm
-\newcommand{\bild}[4]{%
+\newcommand{\asfigure}[4]{%
   \begin{figure}[htb]%
     \begin{center}%
       \includegraphics[width=#4cm]{images/#2}%
@@ -177,7 +179,7 @@ Abgabedatum:\\
 % #3 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #4 = Beschriftung
 % #5 = label für \ref-Verweise
-\newcommand{\fliesstext}[5]{%
+\newcommand{\textflow}[5]{%
 \begin{wrapfigure}{#1}{#2cm}%
 \includegraphics[width=#2cm]{images/#3}%
 \caption{#4}%

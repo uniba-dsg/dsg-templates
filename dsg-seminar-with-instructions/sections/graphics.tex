@@ -14,9 +14,9 @@ Newly created graphics should therefore be copied to the \emph{images}-directory
 \subsection{Graphics between paragraphs}
 %
 Graphics can be included between paragraphs using 
-\texttt{\textbackslash bild}.
+\texttt{\textbackslash asfigure}.
 \begin{verbatim}
-\bild{picture1}{vs-logo}{DSG-Logo}{5}
+\asfigure{picture1}{vs-logo}{DSG-Logo}{5}
 \end{verbatim}
 The first parameter \texttt{picture1} serves as a label to reference the graphic. 
 The second parameter is the name of the graphics file without its file ending.
@@ -26,17 +26,17 @@ If a graphic is wider than the provided width, it is shrinked.
 Smaller graphics are scaled up.
 The above command leads to figure \ref{picture1}.
 
-\bild{picture1}{vs-logo}{DSG-Logo}{5}
+\asfigure{picture1}{vs-logo}{DSG-Logo}{5}
 
 \subsection{Graphics surrounded by text}
 %
-If a graphic should be surrounded by text, the command \texttt{\textbackslash fliesstext} has to be used.
+If a graphic should be surrounded by text, the command \texttt{\textbackslash textflow} has to be used.
 This command is based on the package \emph{wrapfig} which might have to be installed.
-\fliesstext{r}{3}{vs-logo}{DSG-Logo}{picture2}
+\textflow{r}{3}{vs-logo}{DSG-Logo}{picture2}
 This package is, similar to all other environments with this functionality, limited and partially erroneous.
 Therefore it should be used only with caution.
 A graphic can be included with:\\\\
-\verb+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{picture2}+\\\\
+\verb+\textflow{r}{3}{vs-logo}{DSG-Logo}{picture2}+\\\\
 After this command, the text follows which should surround the figure.
 For the first parameter, only the small letters \emph{l} and \emph{r} are possible.
 They lead to the graphic being arranged on the left or right side.
@@ -47,6 +47,6 @@ The fourth parameter defines the caption for the figure and with the fifth param
 
 A peculiarity of this package is that graphics are always placed at the beginning of a paragraph.
 If a graphic should be enclosed completely by a paragraph, as it is the case with figure \ref{picture2}, the command 
-\texttt{\textbackslash fliesstext} should not be placed before the paragraph but within it.
+\texttt{\textbackslash textflow} should not be placed before the paragraph but within it.
 The above command is therefore placed after the word "`installed"'.
 %

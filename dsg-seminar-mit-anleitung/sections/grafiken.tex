@@ -16,31 +16,31 @@ erfolgreich einbinden zu können. Selbst erstellte Grafiken müssen also in das
 \subsection{Grafiken zwischen Absätzen}
 %
 Eine Einbindung von Grafiken zwischen Absätzen erfolgt mit dem Befehl
-\texttt{\textbackslash bild}.
+\texttt{\textbackslash asfigure}.
 \begin{verbatim}
-\bild{bild1}{vs-logo}{DSG-Logo}{5}
+\asfigure{bild1}{vs-logo}{DSG-Logo}{5}
 \end{verbatim}
 Der erste Parameter \texttt{bild1} dient als Label für Referenzen auf die
 Grafik. Der zweite Parameter ist der Name der Grafikdatei ohne Endung. Als
-dritten Parameter ist dem Befehl \texttt{\textbackslash bild} die Beschriftung
+dritten Parameter ist dem Befehl \texttt{\textbackslash asfigure} die Beschriftung
 der Abbildung zu übergeben. Der letzte Parameter gibt
 die Breite der Grafik in cm an. Die Größenangabe darf aber nur als Zahl erfolgen.
 Ist eine Grafik breiter als der übergebene Parameter, so wird sie verkleinert, kleinere Grafiken werden
 entsprechend vergrößert. Der obige Befehl führt zu der folgenden Abbildung
 \ref{bild1}.
 
-\bild{bild1}{vs-logo}{DSG-Logo}{5}
+\asfigure{bild1}{vs-logo}{DSG-Logo}{5}
 
 \subsection{Von Text umflossene Grafiken}
 %
 Sollen Grafiken von Text umflossen werden, so ist der Befehl
-\texttt{\textbackslash fliesstext} zu benutzen. Dieser Befehl basiert auf dem Paket
+\texttt{\textbackslash textflow} zu benutzen. Dieser Befehl basiert auf dem Paket
 \emph{wrapfig}, dass u.U. nachinstalliert werden muss. Dieses
-\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}
+\textflow{r}{3}{vs-logo}{DSG-Logo}{bild2}
 Paket ist, wie alle anderen Umgebungen mit dieser Funktionalität, etwas
 beschränkt und zum Teil fehlerhaft, deshalb ist die Nutzung nur unter Vorbehalt
 empfohlen. Eine Grafik kann wie folgt eingebunden werden.\\\\
-\verb+\fliesstext{r}{3}{vs-logo}{DSG-Logo}{bild2}+\\\\
+\verb+\textflow{r}{3}{vs-logo}{DSG-Logo}{bild2}+\\\\
 Nach diesem Befehl folgt der Text, der das eingebundene Bild umfliessen
 soll. Für den ersten Parameter kommen als einzig relevante Möglichkeiten die
 kleinen Buchstaben \emph{l} und \emph{r} in Frage. Diese sorgen für eine

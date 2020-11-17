@@ -121,20 +121,21 @@ Date of submission:\\
 }
 % Einstellungen für Java-Code
 \lstdefinestyle{javaStyle}{%
-  basicstyle=\small,%
-  backgroundcolor=\color{hellgrau},%
-  keywordstyle=\bfseries,%
-  showstringspaces=false,%
-  language=Java,%
-  numbers=left,%
-  numberstyle=\tiny,%
-  stepnumber=1,%
-  numbersep=9pt,%
-  extendedchars=true,%
-  xleftmargin=2em,%
-  lineskip=-1pt,%
-  breaklines,%
-  tabsize=4%
+	basicstyle=\small,%
+	backgroundcolor=\color{hellgrau},%
+	keywordstyle=\bfseries,%
+	showstringspaces=false,%
+	numbers=left,%
+	numberstyle=\footnotesize,%
+	stepnumber=1,%
+	numbersep=3pt,%
+	extendedchars=true,%
+	xleftmargin=2em,%
+	lineskip=-1pt,%
+	tabsize=4,%
+	language=Java,
+	breaklines,%
+	identifierstyle=\ttfamily,
 }
 % set default to java, explicitly set to others when needed
 \lstset{style=javaStyle}
@@ -162,7 +163,7 @@ Date of submission:\\
 % #2 = Caption
 % #3 = label für \ref-Verweise
 % #4 = Breite des Bildes im Dokument in % der breite
-\newcommand{\image}[4]{%
+\newcommand{\asfigure}[4]{%
   \begin{figure}[htb]%
     \begin{center}%
       \includegraphics[width=#4\textwidth]{images/#1}%
@@ -180,7 +181,7 @@ Date of submission:\\
 % #3 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #4 = Beschriftung
 % #5 = label für \ref-Verweise
-\newcommand{\fliesstext}[5]{%
+\newcommand{\textflow}[5]{%
 \begin{wrapfigure}{#1}{#2cm}%
 \includegraphics[width=#2cm]{images/#3}%
 \caption{#4}%

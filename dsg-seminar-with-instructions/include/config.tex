@@ -98,7 +98,7 @@
 % #2 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #3 = Beschriftung
 % #4 = Breite des Bildes im Dokument in cm
-\newcommand{\bild}[4]{%
+\newcommand{\asfigure}[4]{%
   \begin{figure}[htb]%
     \begin{center}%
       \includegraphics[width=#4cm]{images/#2}%
@@ -116,7 +116,7 @@
 % #3 = Name des Bildes ohne Endung relativ zu images-Verzeichnis
 % #4 = Beschriftung
 % #5 = label für \ref-Verweise
-\newcommand{\fliesstext}[5]{%
+\newcommand{\textflow}[5]{%
 \begin{wrapfigure}{#1}{#2cm}%
 \includegraphics[width=#2cm]{images/#3}%
 \caption{#4}%
