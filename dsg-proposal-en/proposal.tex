@@ -1,0 +1,31 @@
+% Configuration
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titlepage
+\maketitle{Proposal Seminar paper|Bachelor Thesis|Master Thesis}{Wirtschaftsinformatik|Angewandte Informatik|International Software Systems Science}{Thesis Topic}{Author}{dd.mm.yyyy}
+%
+% TOCs
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Insert your chapters here
+%
+\input{sections/content.tex}
+%
+\newpage
+%
+% References
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{alpha}
+%
+% Insert your bibliography here
+\bibliography{bibliography/references}
+\newpage
+%
+\end{document}

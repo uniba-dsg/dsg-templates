@@ -1,0 +1,31 @@
+% Einbindung der Konfigurationsdatei
+\input{includes/config.tex}
+%
+\begin{document}
+%
+% Titelblatt erstellen
+\maketitle{Exposé Seminararbeit|Bachelorarbeit|Masterarbeit }{Wirtschaftsinformatik|Angewandte Informatik|International Software Systems Science}{Thema der Arbeit}{Autor}{dd.mm.yyyy}
+%
+% Erstellung der Inhaltsverzeichnisse
+\pagenumbering{Roman}
+\tableofcontents
+\newpage
+\fancyhead[LO]{\footnotesize\sc\nouppercase{\leftmark}}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%
+% Hier einzelne Kapitel mit \input{sections/Kapitel-File} einfügen.
+%
+\input{sections/inhalt.tex}
+%
+\newpage
+%
+% Einstellungen für Literaturverzeichnis
+\addcontentsline{toc}{section}{\bibname}
+\bibliographystyle{geralpha}
+%
+% Hier das Literaturverzeichnis einbinden
+\bibliography{bibliography/references}
+\newpage
+%
+\end{document}
